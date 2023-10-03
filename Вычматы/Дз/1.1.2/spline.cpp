@@ -7,7 +7,7 @@
 std::vector<double> population = {92228496, 106021537,123202624,132164569,151325798,179323175,203211926,226545805,248709873,281421906};
 std::vector<double> years = {1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000};
 
-void Run(std::vector<double> &x, std::vector<double> &f, std::vector<double> &a, std::vector<double> &b, std::vector<double> &c, std::vector<double> &d, uint32_t N){
+void Run(std::vector<double> &x, std::vector<double> &f, std::vector<double> &b, std::vector<double> &c, std::vector<double> &d, uint32_t N){
     std::vector<double> delta(N + 1);
     std::vector<double> lamda(N + 1);
     std::vector<double> h(N + 1);
@@ -40,11 +40,10 @@ void Run(std::vector<double> &x, std::vector<double> &f, std::vector<double> &a,
 
 double spline (std::vector<double> &x, std::vector<double> &f, double x0) {
     uint32_t N = f.size() - 1;
-    std::vector<double> a(N + 1);
     std::vector<double> b(N + 1);
     std::vector<double> c(N + 1);
     std::vector<double> d(N + 1);
-    Run(x, f, a, b, c, d, N);
+    Run(x, f, b, c, d, N);
 
     uint32_t k = 0;
     for (; k < N + 1; k++) {
