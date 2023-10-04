@@ -26,9 +26,9 @@ double Difference (std::vector<double> &x, std::vector<double> &f, uint16_t k){
 
 double NewtonFunc (std::vector<double> &x, std::vector<double> &f, double x0){
     double P = f[0];
-    for (uint32_t k = 1; k <= f.size(); k++) {
+    for (uint32_t k = 1; k < f.size(); k++) {
         double product = 1;
-        for (uint32_t i = 0; i <= k - 1; i++) {
+        for (uint32_t i = 0; i < k ; i++) {
             product *= (x0 - x[i]);
         }
         P += (Difference(x, f, k) * product);

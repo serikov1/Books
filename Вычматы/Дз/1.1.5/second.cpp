@@ -32,7 +32,7 @@ int main() {
     double answer = 0.0;
 
     // разбиение для интегрирования
-    const uint32_t N = 1000000;
+    const uint32_t N = 10000;
     for(uint32_t i = 0; i < N; i++) {
         answer += GaussFunc(a + i * (b-a)/N, a + (i+1) * (b-a)/N);
     }
