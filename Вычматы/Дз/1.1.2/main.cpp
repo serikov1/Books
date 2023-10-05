@@ -12,8 +12,6 @@ double derivative(double num) {
     return exp(-pow(num, 2)) * (1 - 2 * pow(num, 2));
 }
 
-
-
 int main() {
 
     double x0 = 0.6;
@@ -22,6 +20,7 @@ int main() {
     double tau = 0.55;
     double epsilon = 0.00001;
     uint32_t n = 1;
+
     while(std::abs(xn1 - xn) > epsilon) {
         if(n > 1) xn = xn1;
         xn1 = xn + tau * derivative(xn);
