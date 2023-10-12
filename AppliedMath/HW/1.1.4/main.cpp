@@ -21,18 +21,18 @@ std::vector<double> JF(std::vector<double> Xn) {
 
 
 int main() {
-    std::vector<double> Xn = {-0.64, -0.76};
+    std::vector<double> Xn = {-0.7, -0.7};
     std::vector<double> Xn1 = {0, 0};
 
     double epsilon = 0.000001;
     uint32_t n = 1;
     while (std::abs(Xn1[0] - Xn[0]) > epsilon && std::abs(Xn1[1] - Xn[1]) > epsilon) {
+        Xn1[0] = Xn[0] - JF(Xn)[0];
+        Xn1[1] = Xn[1] - JF(Xn)[1];
         if(n > 1) {
             Xn[0] = Xn1[0];
             Xn[1] = Xn1[1];
         }
-        Xn1[0] = Xn[0] - JF(Xn)[0];
-        Xn1[1] = Xn[1] - JF(Xn)[1];
         n++;
     }
 
@@ -44,12 +44,12 @@ int main() {
 
     n = 1;
     while (std::abs(Xn1[0] - Xn[0]) > epsilon && std::abs(Xn1[1] - Xn[1]) > epsilon) {
+        Xn1[0] = Xn[0] - JF(Xn)[0];
+        Xn1[1] = Xn[1] - JF(Xn)[1];
         if(n > 1) {
             Xn[0] = Xn1[0];
             Xn[1] = Xn1[1];
         }
-        Xn1[0] = Xn[0] - JF(Xn)[0];
-        Xn1[1] = Xn[1] - JF(Xn)[1];
         n++;
     }
 
