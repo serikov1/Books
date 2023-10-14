@@ -15,7 +15,7 @@ double det(double x, double y) {
 }
 
 std::vector<double> JF(std::vector<double> Xn) {
-    return {det(Xn[0], Xn[1])*( f1(Xn[0], Xn[1])*2*Xn[0] - 2*Xn[1]*f2(Xn[0], Xn[1]) ),
+    return {det(Xn[0], Xn[1])*( f1(Xn[0], Xn[1]) - 2*Xn[1]*f2(Xn[0], Xn[1]) ),
             det(Xn[0], Xn[1])*( f1(Xn[0], Xn[1])/ pow(cos(Xn[0]), 2) + 2*Xn[1]*f2(Xn[0], Xn[1])) };
 }
 
@@ -24,9 +24,9 @@ int main() {
     std::vector<double> Xn = {-0.7, -0.7};
     std::vector<double> Xn1 = {0, 0};
 
-    double epsilon = 0.000001;
+    double epsilon = 0.00000001;
     uint32_t n = 1;
-    while (std::abs(Xn1[0] - Xn[0]) > epsilon && std::abs(Xn1[1] - Xn[1]) > epsilon) {
+    while ( sqrt( std::abs(pow(Xn1[0],2) + pow(Xn1[1], 2)  -  pow(Xn[0],2) - pow(Xn[1], 2) ) ) > epsilon ) {
         Xn1[0] = Xn[0] - JF(Xn)[0];
         Xn1[1] = Xn[1] - JF(Xn)[1];
         if(n > 1) {
@@ -43,7 +43,7 @@ int main() {
     Xn1 = {0, 0};
 
     n = 1;
-    while (std::abs(Xn1[0] - Xn[0]) > epsilon && std::abs(Xn1[1] - Xn[1]) > epsilon) {
+    while (sqrt( std::abs(pow(Xn1[0],2) + pow(Xn1[1], 2)  -  pow(Xn[0],2) - pow(Xn[1], 2) ) ) > epsilon ) {
         Xn1[0] = Xn[0] - JF(Xn)[0];
         Xn1[1] = Xn[1] - JF(Xn)[1];
         if(n > 1) {

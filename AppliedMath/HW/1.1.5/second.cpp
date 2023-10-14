@@ -11,7 +11,7 @@ const double Ci[n]={0.5555556,0.8888889,0.5555556};
 
 // исходная функция
 double f(double x) {
-    return sin(100 * x) * exp(-pow(x, 2)) * cos(2 * x);
+    return sin( x);
 }
 
 // составляем функцию Гаусса со смещением координат из (a, b) в (-1, 1)
@@ -27,8 +27,8 @@ double GaussFunc(double a, double b) {
 }
 
 int main() {
-    double a = 0;
-    double b = 3;
+    double a = 1;
+    double b = 2;
     double answer = 0.0;
 
     // разбиение для интегрирования
