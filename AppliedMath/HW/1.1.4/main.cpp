@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
+#include <iomanip>
 
 double f1(double xn, double yn) {
     return pow(xn, 2) + pow(yn,2) - 1;
@@ -24,35 +25,36 @@ int main() {
     std::vector<double> Xn = {-0.7, -0.7};
     std::vector<double> Xn1 = {0, 0};
 
-    double epsilon = 0.00000001;
+    double epsilon = 0.000001;
     uint32_t n = 1;
-    while ( sqrt( std::abs(pow(Xn1[0],2) + pow(Xn1[1], 2)  -  pow(Xn[0],2) - pow(Xn[1], 2) ) ) > epsilon ) {
-        Xn1[0] = Xn[0] - JF(Xn)[0];
-        Xn1[1] = Xn[1] - JF(Xn)[1];
+    while ( sqrt( std::abs(pow(Xn1[0] - Xn[0],2) + pow(Xn1[1] - Xn[1], 2) ) > epsilon ) ){
         if(n > 1) {
             Xn[0] = Xn1[0];
             Xn[1] = Xn1[1];
         }
+        Xn1[0] = Xn[0] - JF(Xn)[0];
+        Xn1[1] = Xn[1] - JF(Xn)[1];
+
         n++;
     }
 
-    std::cout<<"Первый нуль функции: " << "x = " << Xn1[0]<< ";" << " y = " << Xn1[1] << "\n" << "Получен на " << n << " шаге МПИ \n" << std::endl;
+    std::cout<< std::setprecision (10) <<"Первый нуль функции: " << "x = " << Xn1[0]<< ";" << " y = " << Xn1[1] << "\n" << "Получен на " << n << " шаге МПИ \n" << std::endl;
 
 
     Xn = {0.7, 0.7};
     Xn1 = {0, 0};
 
     n = 1;
-    while (sqrt( std::abs(pow(Xn1[0],2) + pow(Xn1[1], 2)  -  pow(Xn[0],2) - pow(Xn[1], 2) ) ) > epsilon ) {
-        Xn1[0] = Xn[0] - JF(Xn)[0];
-        Xn1[1] = Xn[1] - JF(Xn)[1];
+    while ( sqrt( std::abs(pow(Xn1[0] - Xn[0],2) + pow(Xn1[1] - Xn[1], 2) ) > epsilon ) ) {
         if(n > 1) {
             Xn[0] = Xn1[0];
             Xn[1] = Xn1[1];
         }
+        Xn1[0] = Xn[0] - JF(Xn)[0];
+        Xn1[1] = Xn[1] - JF(Xn)[1];
         n++;
     }
 
-    std::cout<<"Второй нуль функции: " << "x = " << Xn1[0]<< ";" << " y = " << Xn1[1] << "\n" << "Получен на " << n << " шаге МПИ \n" << std::endl;
+    std::cout<< std::setprecision (10) <<"Второй нуль функции: " << "x = " << Xn1[0]<< ";" << " y = " << Xn1[1] << "\n" << "Получен на " << n << " шаге МПИ \n" << std::endl;
 
 }
