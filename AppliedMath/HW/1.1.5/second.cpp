@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <cstdint>
 
 // задача 2. Вычислить интеграл I = int|0 - 3| { sin(100x) exp(-x^2) cos(2x) dx}
 // использую формулу интегрирования Гаусса Sigma|i=1 - n| { C_i f(x_i) }, где n = 3
