@@ -1,0 +1,68 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15.3"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "1_1_2",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "1_1_2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-1_1_2-Debug-365538d40711d57231d6.json",
+					"name" : "1_1_2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "second::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-second-Debug-ad6a1e7884fc63ef1cf6.json",
+					"name" : "second",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/PHYSTECH/Books/AppliedMath/HW/1.1.3/cmake-build-debug",
+		"source" : "C:/PHYSTECH/Books/AppliedMath/HW/1.1.3"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
