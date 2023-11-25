@@ -20,7 +20,7 @@ double z0 = 1;
 
 double f (double x, double y, double z) {
     return - (z + cos(x) * y) * (pow(x, 2) - 3) + 2 - 6 * x + 2 * pow(x, 3) + (pow(x, 2) - 3) * exp(x) + sin(x) *
-                                                                                                         (1 + cos(x)) + cos(x) * (exp(x) + (pow(x, 2) - 1) + pow(x, 4) - 3 * pow(x, 2));
+    (1 + cos(x)) + cos(x) * (exp(x) + (pow(x, 2) - 1) + pow(x, 4) - 3 * pow(x, 2));
 }
 
 double g (double x, double y, double z){
