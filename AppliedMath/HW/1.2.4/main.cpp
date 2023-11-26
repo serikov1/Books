@@ -9,7 +9,7 @@ double T = pow(e, 2);
 double hk = 0.001;
 double hl = 0.001;
 double y_l = 2 * pow(e, 2);
-
+double z0 = -79;
 
 //    p =  0.5 * (-e^(log(x) + 1)) * x * log(x) / (sqrt(1 / x^2 + x^2 * e * log(x) - e^(log(x) + 1) * x * log(x))))
 double p (double x){
@@ -29,6 +29,14 @@ double r (double x){
 //    f =  p(x) * z + q(x) * y + r(x)
 double f (double x, double y, double z){
     return p(x) * z + q(x) * y + r(x);
+}
+
+double h (double x, double y, double z) {
+//    fmt::print("h = {} \n", 1 / pow(x, 2) - exp(z) * y + e / log(x) * pow(y, 2));
+    return (1 / pow(x, 2) - exp(z) * y + e / log(x) * pow(y, 2));
+}
+double Y0 (double x) {
+    return x * log(x);
 }
 
 //    z = g
@@ -90,26 +98,34 @@ std::vector<double> calculate(std::vector<double>& u){
     return u;
 }
 
-
+std::vector<double> nu;
+std::vector<double> Y;
+std::vector<double> X;
 std::vector<double> routine (std::vector<double>& U){
     uint16_t n = 0;
-    double z = U[2];
     std::vector<double> u(3);
     u = U;
-    u = {e, 0, z};
+    Y.push_back(u[1]);
+    //std::cout<<"z = " << u[2] << std::endl;
     while (x0 + hl * n < T) {
         u = calculate(u);
+        X.push_back(x0 + hl * n);
+        nu.push_back(u[1]);
+        Y.push_back(Y0(x0 + hl * n) + *(nu.end() - 1));
+
+        if (n == 100) std::cout << "n = 100: x = "<< u[0] << " y = " << *(Y.end() - 1) << std::endl;
+        if (n == 500) std::cout << "n = 500: x = "<< u[0] << " y = " << *(Y.end() - 1) << std::endl;
+        if (n == 2000) std::cout << "n = 2000: x = "<< u[0] << " y = " << *(Y.end() - 1) << std::endl;
         n++;
-        std::cout<<"y = " << u[1] << std::endl;
     }
-    return u;
+
+    return Y;
 }
 
 
 int main(){
-    double z0 = 0.01;
-    std::vector<double> u0 = {e, 0, z0};
+    std::vector<double> u0 = {e, e, z0};
     std::vector<double> u = routine(u0);
-   std::cout << "x = " <<u[0] << " y = "<< u[1] << std::endl;
+    std::cout << "x = " <<*(X.end() - 1)<< " y = "<< *(u.end() - 1)<< std::endl;
     return 0;
 }
