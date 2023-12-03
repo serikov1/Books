@@ -9,7 +9,7 @@ double T = pow(e, 2);
 double hk = 0.001;
 double hl = 0.001;
 double y_l = 2 * pow(e, 2);
-double z0 = -79;
+double z0 = 2;
 
 //    p =  0.5 * (-e^(log(x) + 1)) * x * log(x) / (sqrt(1 / x^2 + x^2 * e * log(x) - e^(log(x) + 1) * x * log(x))))
 double p (double x){
@@ -124,7 +124,7 @@ std::vector<double> routine (std::vector<double>& U){
 
 
 int main(){
-    std::vector<double> u0 = {e, e, z0};
+    std::vector<double> u0 = {e, 0, z0};
     std::vector<double> u = routine(u0);
     std::cout << "x = " <<*(X.end() - 1)<< " y = "<< *(u.end() - 1)<< std::endl;
     return 0;
