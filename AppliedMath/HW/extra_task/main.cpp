@@ -36,14 +36,11 @@ double K6(std::vector<double>& u){
 
 std::vector<double> delta(std::vector<double>& u) {
     double k1 = K1(u);
-    double k2 = K2(u);
     double k3 = K3(u);
     double k4 = K4(u);
-    double k5 = K5(u);
     double k6 = K6(u);
     return {h, (37 * k1 / 378 + 250 * k3 / 621 + 125 * k4 / 594 + 512 * k6 / 1771 )};
 }
-
 
 std::vector<double> calculate(std::vector<double>& u){
     std::vector<double> d = delta(u);
@@ -52,12 +49,10 @@ std::vector<double> calculate(std::vector<double>& u){
     return u;
 }
 
-
 std::vector<double> routine (std::vector<double>& U){
     uint16_t n = 0;
     std::vector<double> u(2);
     u = U;
-
     while (h * n < T) {
         u = calculate(u);
         n++;
@@ -65,7 +60,6 @@ std::vector<double> routine (std::vector<double>& U){
     }
     return u;
 }
-
 
 int main(){
     std::vector<double> u_0 = {0, 1};
