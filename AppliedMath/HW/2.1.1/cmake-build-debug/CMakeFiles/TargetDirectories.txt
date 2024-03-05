@@ -1,3 +1,4 @@
 C:/PHYSTECH/Books/AppliedMath/HW/2.1.1/cmake-build-debug/CMakeFiles/2_1_1.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.1.1/cmake-build-debug/CMakeFiles/second.dir
 C:/PHYSTECH/Books/AppliedMath/HW/2.1.1/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/PHYSTECH/Books/AppliedMath/HW/2.1.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

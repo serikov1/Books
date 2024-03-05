@@ -83,19 +83,17 @@ int main() {
 
     for(auto n = 0; n < 1; n++)
     {
-//        std::cout<<"t = "<< n << std::endl;
         for(uint8_t i = 0; i < N; i++)
         {
             std::cout<< solution_corner[n][i]<< ", " <<std::endl;
         }
     }
-//    for(auto n = 16; n < 17; n++)
-//    {
-////        std::cout<<"t = "<< n << std::endl;
-//        for(uint8_t i = 0; i < N; i++)
-//        {
-//            std::cout<< solution_Lax[n][i]<< ", " <<std::endl;
-//        }
-//    }
-//    return 0;
+    for(auto n = 16; n < 17; n++)
+    {
+        for(uint8_t i = 0; i < N; i++)
+        {
+            std::cout<< solution_Lax[n][i]<< ", " <<std::endl;
+        }
+    }
+    return 0;
 }

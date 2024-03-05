@@ -145,18 +145,18 @@ int main() {
     std::vector<double> v_r = {rho_R, v_R, P_R / ((gamma - 1) * rho_R)};
     std::vector<std::vector<std::vector<double>>> solution = KER(v_l, v_r);
 
-//    std::cout<< "rho = " << std::endl;
-//    for (auto i = 0; i < N; i++) {
-//        std::cout << solution[150000][i][0] << ", " << std::endl;
-//    }
-//    std::cout<< "u = " << std::endl;
-//    for (auto i = 0; i < N; i++) {
-//        std::cout << solution[150000][i][1] / solution[150000][i][0] << ", " << std::endl;
-//    }
-//    std::cout<< "e = " << std::endl;
-//    for (auto i = 0; i < N; i++) {
-//        std::cout << solution[150000][i][2] / solution[150000][i][0] << ", " << std::endl;
-//    }
+    std::cout<< "rho = " << std::endl;
+    for (auto i = 0; i < N; i++) {
+        std::cout << solution[150000][i][0] << ", " << std::endl;
+    }
+    std::cout<< "u = " << std::endl;
+    for (auto i = 0; i < N; i++) {
+        std::cout << solution[150000][i][1] / solution[150000][i][0] << ", " << std::endl;
+    }
+    std::cout<< "e = " << std::endl;
+    for (auto i = 0; i < N; i++) {
+        std::cout << solution[150000][i][2] / solution[150000][i][0] << ", " << std::endl;
+    }
     std::cout<< "P = " << std::endl;
     for (auto i = 0; i < N; i++) {
         std::cout << solution[150000][i][2] * (gamma - 1) << ", " << std::endl;
