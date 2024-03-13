@@ -1,0 +1,3 @@
+C:/PHYSTECH/Books/AppliedMath/HW/extra_task_1/cmake-build-debug/CMakeFiles/extra_task_1.dir
+C:/PHYSTECH/Books/AppliedMath/HW/extra_task_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/PHYSTECH/Books/AppliedMath/HW/extra_task_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

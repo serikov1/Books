@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - MinGW Makefiles" -S C:\PHYSTECH\Books\AppliedMath\HW\2.1.1 -B C:\PHYSTECH\Books\AppliedMath\HW\2.1.1\cmake-build-release
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/PHYSTECH/Books/AppliedMath/HW/2.1.1/cmake-build-release
