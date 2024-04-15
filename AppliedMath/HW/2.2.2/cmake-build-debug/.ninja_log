@@ -1,0 +1,6 @@
+# ninja log v5
+1	919	7349158933213940	CMakeFiles/task.dir/main.cpp.obj	9512310e967d57f9
+10	1988	7349158943871942	fmt-10.2.0/CMakeFiles/fmt.dir/src/os.cc.obj	dd5ea2bd7993e00c
+6	2733	7349158951279475	fmt-10.2.0/CMakeFiles/fmt.dir/src/format.cc.obj	e81e8627e704aaa
+2733	3309	7349158957125346	fmt-10.2.0/libfmtd.a	d90dea79612b310f
+3310	3461	7349158958503228	task.exe	80242a7249b3d301

@@ -1,0 +1,14 @@
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/task.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/list_install_components.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/install.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/install/local.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/CMakeFiles/install/strip.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/fmt.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/edit_cache.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/rebuild_cache.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/list_install_components.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/install.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/install/local.dir
+C:/PHYSTECH/Books/AppliedMath/HW/2.2.2/cmake-build-debug/fmt-10.2.0/CMakeFiles/install/strip.dir

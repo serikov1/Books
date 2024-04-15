@@ -89,7 +89,7 @@ std::vector<double> routine(std::vector<double>& p){
         std::copy(p2.begin(), p2.end(), p1.begin());
 
         if (out.is_open()) {
-            out <<  "\n t = " << i << ":" << std::endl;
+//            out <<  "\n t = " << i << ":" << std::endl;
             for (auto j = 0u; j < L / h ; j++){
                 out <<  p1[j] << ", ";
             }
