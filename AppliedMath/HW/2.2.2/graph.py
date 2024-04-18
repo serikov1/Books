@@ -27,9 +27,6 @@ l = np.array([[float(i) for i in j] for j in l])
 
 delta = []
 
-
-
-
 def animate_func(num):
    ax.clear()
    ax.plot_surface(xgrid, ygrid, l[0 + h * num:h + h * num].T)
@@ -46,7 +43,7 @@ ax = plt.axes(projection='3d')
 line_ani = animation.FuncAnimation(fig, animate_func, interval=1, frames=T)
 plt.show()
 
-f = "N1000.gif"
-writergif = animation.PillowWriter(fps=100)
-line_ani.save(f, writer=writergif)
+# f = "N1000.gif"
+# writergif = animation.PillowWriter(fps=100)
+# line_ani.save(f, writer=writergif)
 
