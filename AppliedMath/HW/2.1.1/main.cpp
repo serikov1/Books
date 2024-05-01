@@ -3,17 +3,19 @@
 #include "cstdint"
 #include "vector"
 
-double L = 20.5;
+double L = 1;
 uint8_t N = 42;
 double h = L / (N - 1);
 double tau = 10*h;
-double T = 18;
+double T = 1./3;
 double x0 = 0;
 double a = 1;
+double Ul = 10;
+double Ur = 1;
 
 double u0(double x)
 {
-    return sin(4* M_PI * x / L);
+    return Ul;
 }
 
 std::vector<double> compute_corner(std::vector<double>& y0, std::vector<double>& y)
