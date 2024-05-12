@@ -1,0 +1,33 @@
+// Define dimensions of the domain
+real Lx = 10;
+real Ly = 20;
+
+// Define points A, B, C, ... I as 2D coordinates
+real[int] A(2), B(2), C(2), D(2), E(2), F(2), G(2), H(2), I(2);
+
+// Assign specific coordinates to each point
+A = [0, 0];      B = [Lx, 0];     C = [Lx, Ly];     D = [Lx/2, Ly]; 
+E = [Lx/2, Ly/4]; F = [0, Ly/4];    G = [Lx/4, Ly/8]; H = [3*Lx/4, Ly/8]; 
+I = [3*Lx/4, 7*Ly/8];
+
+// Define boundaries using line segments between points
+border l1 (t=0,1) { x = (1-t)*A[0] + t*B[0]; y = (1-t)*A[1] + t*B[1]; label = 0; }
+border l2 (t=0,1) { x = (1-t)*B[0] + t*C[0]; y = (1-t)*B[1] + t*C[1]; label = 0; }
+border l3 (t=0,1) { x = (1-t)*C[0] + t*D[0]; y = (1-t)*C[1] + t*D[1]; label = 0; }
+border l4 (t=0,1) { x = (1-t)*D[0] + t*E[0]; y = (1-t)*D[1] + t*E[1]; label = 0; }
+border l5 (t=0,1) { x = (1-t)*E[0] + t*F[0]; y = (1-t)*E[1] + t*F[1]; label = 0; }
+border l6 (t=0,1) { x = (1-t)*F[0] + t*A[0]; y = (1-t)*F[1] + t*A[1]; label = 0; }
+
+border i1 (t=0,1) { x = (1-t)*G[0] + t*H[0]; y = (1-t)*G[1] + t*H[1]; label = 0; }
+border i2 (t=0,1) { x = (1-t)*H[0] + t*I[0]; y = (1-t)*H[1] + t*I[1]; label = 0; }
+
+// Define mesh refinement level
+int nn = 4;
+
+// Build the mesh using the defined points and boundaries
+mesh Th1 = buildmesh(l1(nn*Lx)+l2(nn*Ly)+l3(Lx/2.*nn)+l4(3.*Ly/4.*nn)+
+                   l5(Lx/2.*nn)+l6(Ly/4.*nn));
+mesh Th2 = buildmesh(i1(Lx/2.*nn)+i2(Ly*6./8.*nn));
+
+// Plot the mesh and save the figure
+plot(Th1, Th2, wait=1, ps="pureconvect.eps");
