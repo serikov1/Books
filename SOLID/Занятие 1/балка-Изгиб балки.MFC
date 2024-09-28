@@ -1,0 +1,16 @@
+[StartTime]
+балка-Изгиб балки.MFC=
+[SolverState]
+балка-Изгиб балки.MFC=2
+[MainFrame]
+балка-Изгиб балки.MFC=MCAAAAAAAAAAAAAABAAAAAAAPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPMECAAAAAHEBAAAAAELDAAAAAKBCAAAAA
+[ShowMin]
+балка-Изгиб балки.MFC=No
+[SolverType]
+балка-Изгиб балки.MFC=Линейный анализ
+[StudyType]
+балка-Изгиб балки.MFC=0
+[StudyName]
+балка-Изгиб балки.MFC=Изгиб балки
+[Solver]
+балка-Изгиб балки.MFC=Iterative
