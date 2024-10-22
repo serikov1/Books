@@ -1,0 +1,7 @@
+2024-Oct-20 11:35:12
+Computer name:	DESKTOP-A3HMU9V
+Number of cores used in calculation:	12
+Configuration name:	По умолчанию
+Project name:	Re 1
+
+Warnings on last iteration: 

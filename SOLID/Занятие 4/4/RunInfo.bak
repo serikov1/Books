@@ -1,0 +1,29 @@
+﻿absolute path:C:\PHYSTECH\Books\SOLID\Занятие 4\4
+init:1
+run_capture:1
+run_solver:1
+new_calc:1
+close_monitor:0
+run_convert:0
+isOK:1
+ForceNewCalc:1
+run_capture_prestate:1
+StartFldName:C:\PHYSTECH\Books\SOLID\Занятие 4\4\4.fld
+NewCalcStartCptName:
+TransTimeMoments:1:018:336142825.75306541
+TransFldNames:48:C:\PHYSTECH\Books\SOLID\Занятие 4\4\r_000000.fld41:C:\PHYSTECH\Books\SOLID\Занятие 4\4\4.fld
+CurSelTranFld:1
+Trans:1
+UsePrevRes:0
+ForcetoRunCPT:1
+ComputerName:
+port:59072
+ProcessResults:1
+LoadLastResult:1
+ProcessorsToUse:0
+LoadBaseFLDFile:0
+BaseFLDFile:
+id:{059727B1-1B44-45B0-88FB-26C7AB6B0976}
+calculation_state:15
+ForceContinue:0
+SolverProcessId:15312
